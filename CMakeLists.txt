@@ -22,6 +22,7 @@ set(UNICORN_VERSION_MINOR 0)
 set(UNICORN_VERSION_PATCH 2)
 
 option(UNICORN_BUILD_SHARED "Build shared instead of static library" ON)
+option(UNICORN_BUILD_SAMPLES "Build sample programs" OFF)
 
 if (NOT UNICORN_ARCH)
     # build all architectures
@@ -946,14 +947,16 @@ else()
     )
 endif()
 
-foreach(SAMPLE_FILE ${UNICORN_SAMPLE_FILE})
-    add_executable(${SAMPLE_FILE}
-        ${CMAKE_CURRENT_SOURCE_DIR}/samples/${SAMPLE_FILE}.c
-    )
-    target_link_libraries(${SAMPLE_FILE}
-        ${SAMPLES_LIB}
-    )
-endforeach(SAMPLE_FILE)
+if (UNICORN_BUILD_SAMPLES)
+	foreach(SAMPLE_FILE ${UNICORN_SAMPLE_FILE})
+	    add_executable(${SAMPLE_FILE}
+		${CMAKE_CURRENT_SOURCE_DIR}/samples/${SAMPLE_FILE}.c
+	    )
+	    target_link_libraries(${SAMPLE_FILE}
+		${SAMPLES_LIB}
+	    )
+	endforeach(SAMPLE_FILE)
+endif (UNICORN_BUILD_SAMPLES)
 
 if(NOT MSVC)
     include("GNUInstallDirs")
