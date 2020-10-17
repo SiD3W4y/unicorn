@@ -59,7 +59,7 @@
 # define ELF_DATA   ELFDATA2LSB
 #endif
 
-#include "elf.h"
+#include "qemu_elf.h"
 
 /* Forward declarations for functions declared in tcg-target.c and used here. */
 static void tcg_target_init(TCGContext *s);

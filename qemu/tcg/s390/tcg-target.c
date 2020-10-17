@@ -31,7 +31,7 @@
 #error "unsupported code generation mode"
 #endif
 
-#include "elf.h"
+#include "qemu_elf.h"
 
 /* ??? The translation blocks produced by TCG are generally small enough to
    be entirely reachable with a 16-bit displacement.  Leaving the option for

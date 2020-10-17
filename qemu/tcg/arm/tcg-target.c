@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-#include "elf.h"
+#include "qemu_elf.h"
 #include "tcg-be-ldst.h"
 
 /* The __ARM_ARCH define is provided by gcc 4.8.  Construct it otherwise.  */

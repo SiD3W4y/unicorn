@@ -84,7 +84,7 @@ static tcg_insn_unit *tb_ret_addr;
 #define GUEST_BASE 0
 #endif
 
-#include "elf.h"
+#include "qemu_elf.h"
 static bool have_isa_2_06;
 #define HAVE_ISA_2_06  have_isa_2_06
 #define HAVE_ISEL      have_isa_2_06
