@@ -116,7 +116,7 @@ template = {
             'mips.h': "mips",
             'x86.h': "x86",
             'sparc.h': "sparc",
-            'm68k.h': "m86k",
+            'm68k.h': "m68k",
             'unicorn.h': "unicorn_internal",
             'comment_open': "//",
             'comment_close': ''
